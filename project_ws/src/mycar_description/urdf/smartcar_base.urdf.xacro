@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot name="smartcar" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- PROPERTY LIST -->
+    <xacro:property name="M_PI" value="3.1415926"/>
+    <xacro:property name="base_length" value="0.25"/>
+    <xacro:property name="base_width" value="0.16"/>
+    <xacro:property name="base_height" value="0.05"/>
+
+    <xacro:property name="wheel_radius" value="0.025"/>
+    <xacro:property name="wheel_length" value="0.02"/>
+
+    <!-- Defining the colors used in this robot -->
+    <material name="yellow">
+        <color rgba="1 0.4 0 1"/>
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 0.95"/>
+    </material>
+    <material name="gray">
+        <color rgba="0.75 0.75 0.75 1"/>
+    </material>
+
+    <!-- Defining wheel used in this robot -->
+    <xacro:macro name="wheel" params="r_l f_b reflectx reflecty reflectz">
+    <joint name="${r_l}_${f_b}_wheel_joint" type="continuous">
+        <axis xyz="0 0 1"/>
+        <parent link="base_link"/>
+        <child link="${r_l}_${f_b}_wheel"/>
+        <origin rpy="0 ${M_PI/2} 0" xyz="${reflectx} ${reflecty} ${reflectz}"/>
+        <limit effort="100" velocity="100"/>
+    <joint_properties damping="0.0" friction="0.0"/>
+    </joint>
+
+    <link name="${r_l}_${f_b}_wheel">
+        <visual>
+            <!-- <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" /> -->
+            <geometry>
+                <cylinder radius="${wheel_radius}" length = "${wheel_length}"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+    </link>
+    </xacro:macro>
+    <xacro:macro name="smartcar_base">
+
+        <link name="base_link">
+            <visual>
+                <geometry>
+                    <box size="${base_length} ${base_width} ${base_height}"/>
+                </geometry>
+                <origin rpy="0 0 ${M_PI/2}" xyz="0 0 0"/>
+                <material name="blue">
+                    <color rgba="0.0 0.0 1 1"/>
+                </material>
+            </visual>
+        </link>
+        <xacro:wheel r_l="right" f_b ="front" reflectx="0.08" reflecty="0.1" reflectz="-0.03"/>
+        <xacro:wheel r_l="right" f_b ="back" reflectx="0.08" reflecty="-0.1" reflectz="-0.03"/>
+        <xacro:wheel r_l="left" f_b ="front" reflectx="-0.08" reflecty="0.1" reflectz="-0.03"/>
+        <xacro:wheel r_l="left" f_b ="back" reflectx="-0.08" reflecty="-0.1" reflectz="-0.03"/>
+    </xacro:macro>
+</robot>

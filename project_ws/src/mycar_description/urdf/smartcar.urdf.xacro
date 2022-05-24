@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="smartcar" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:include filename="$(find mycar_description)/urdf/smartcar_base.urdf.xacro"/>
+    <xacro:smartcar_base/>
+<link name="head">
+    <visual>
+        <geometry>
+            <box size=".02 .03 .03"/>
+        </geometry>
+        <material name="white">
+            <color rgba="1 1 1 1"/>
+        </material>
+    </visual>
+</link>
+
+<joint name="tobox" type="fixed">
+    <parent link="base_link"/>
+    <child link="head"/>
+    <origin xyz="0 0.08 0.025"/>
+</joint>
+</robot>

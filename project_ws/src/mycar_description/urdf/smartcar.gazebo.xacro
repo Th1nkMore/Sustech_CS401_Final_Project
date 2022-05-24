@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot name="smartcar"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz"
+    xmlns:model="http://playerstage.sourceforge.net/gazebo/xmlschema/#model"
+    xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+    xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
+    xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
+    xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#joint"
+    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+    xmlns:rendering="http://playerstage.sourceforge.net/gazebo/xmlschema/#rendering"
+    xmlns:renderable="http://playerstage.sourceforge.net/gazebo/xmlschema/#renderable"
+    xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics"
+    xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Macro for SmartCar body. Including Gazebo extensions, but does not include Kinect -->
+    <!-- <include filename="$(find smartcar_description)/urdf/gazebo.urdf.xacro"/> -->
+    <xacro:include filename="$(find mycar_description)/urdf/smartcar_base.gazebo.xacro"/>
+    <!-- Body of SmartCar, with plates, standoffs and Create (including sim sensors)-->
+    <xacro:smartcar_base/>
+    <link name="head">
+        <inertial>
+            <origin xyz="0.08 0 0.08"/>
+            <mass value="0.1" />
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+        </inertial>
+        <visual>
+            <geometry>
+                <box size=".02 .03 .03"/>
+            </geometry>
+            <material name="white">
+                <color rgba="1 1 1 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.08 0 0.08"/>
+            <geometry>
+                <cylinder length=".02" radius="0.025"/>
+            </geometry>
+        </collision>
+    </link>
+        <gazebo reference="head">
+            <material>Gazebo/White</material>
+        </gazebo>
+    <joint name="tobox" type="fixed">
+        <parent link="base_link"/>
+        <child link="head"/>
+        <origin xyz="0.1 0 ${base_height}"/>
+    </joint>
+</robot>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot name="smartcar"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz"
+    xmlns:model="http://playerstage.sourceforge.net/gazebo/xmlschema/#model"
+    xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+    xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
+    xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
+    xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#joint"
+    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+    xmlns:rendering="http://playerstage.sourceforge.net/gazebo/xmlschema/#rendering"
+    xmlns:renderable="http://playerstage.sourceforge.net/gazebo/xmlschema/#renderable"
+    xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics"
+    xmlns:xacro="http://ros.org/wiki/xacro">
+
+    
+    <xacro:include filename="$(find mycar_description)/urdf/smartcar_base.gazebo.xacro"/>
+    <xacro:include filename="$(find mycar_description)/sensors/kinect_gazebo.xacro"/>
+
+    <xacro:property name="kinect_offset_x" value="0.08"/>
+    <xacro:property name="kinect_offset_y" value="0"/>
+    <xacro:property name="kinect_offset_z" value="${base_height}"/>
+
+    <joint name="kinect_joint" type="fixed">
+        <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="kinect_link" />
+    </joint>
+
+    <xacro:kinect_camera prefix="kinect"/>
+
+</robot>

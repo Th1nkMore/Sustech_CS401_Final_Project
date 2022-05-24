@@ -1,0 +1,8 @@
+prefix=/home/ljy/Sustech_CS401_Final_Project/project_ws/devel
+
+Name: pokemon_simulator
+Description: Description of pokemon_simulator
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

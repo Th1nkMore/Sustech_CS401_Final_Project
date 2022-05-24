@@ -1,0 +1,8 @@
+prefix=/home/ljy/Sustech_CS401_Final_Project/project_ws/devel
+
+Name: pokemon_exploration
+Description: Description of pokemon_exploration
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

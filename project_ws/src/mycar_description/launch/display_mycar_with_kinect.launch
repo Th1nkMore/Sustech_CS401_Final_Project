@@ -1,0 +1,12 @@
+<launch>
+    <arg name="gui" default="true" />
+    <param name="robot_description" textfile="$(find mycar_description)/urdf/smartcar_with_kinect.urdf" />
+
+    <param name="use_gui" value="$(arg gui)"/>
+
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mycar_description)/config/smartcar_urdf.rviz" required="true" />
+</launch>

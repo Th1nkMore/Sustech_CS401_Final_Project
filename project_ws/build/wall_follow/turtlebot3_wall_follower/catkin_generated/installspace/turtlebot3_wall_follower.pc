@@ -1,0 +1,8 @@
+prefix=/home/ljy/Sustech_CS401_Final_Project/project_ws/install
+
+Name: turtlebot3_wall_follower
+Description: Description of turtlebot3_wall_follower
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: actionlib actionlib_msgs rospy std_msgs sensor_msgs geometry_msgs nav_msgs tf
