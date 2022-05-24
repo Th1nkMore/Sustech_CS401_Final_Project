@@ -1,0 +1,9 @@
+#goal
+float64 distance_to_wall
+---
+#result
+float64 average_error
+---
+#feedback
+float64 current_distance
+float64 current_error

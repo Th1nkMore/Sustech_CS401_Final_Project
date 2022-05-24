@@ -1,0 +1,7 @@
+set(turtlebot3_wall_follower_SETUP_PY_SETUP_MODULE "distutils.core")
+set(turtlebot3_wall_follower_SETUP_PY_VERSION "0.0.0")
+set(turtlebot3_wall_follower_SETUP_PY_SCRIPTS "")
+set(turtlebot3_wall_follower_SETUP_PY_PACKAGES "turtlebot3_wall_follower")
+set(turtlebot3_wall_follower_SETUP_PY_PACKAGE_DIRS "src/turtlebot3_wall_follower")
+set(turtlebot3_wall_follower_SETUP_PY_MODULES "")
+set(turtlebot3_wall_follower_SETUP_PY_MODULE_DIRS "")

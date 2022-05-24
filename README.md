@@ -22,6 +22,15 @@
 
 ## ![image-20220524181900720](image/image-20220524181900720.png)
 
+## Function
+
+| Function               | Done | Improvement |
+| ---------------------- | ---- | ----------- |
+| Auto exploration       | Yes  |             |
+| Pokemon Identification | Yes  | Accuracy    |
+| Pokemon grab           | Yes  |             |
+| Multi-robots           | No   |             |
+
 
 
 ## reference list

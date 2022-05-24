@@ -67,7 +67,7 @@ set(turtlebot3_wall_follower_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(turtlebot3_wall_follower_SOURCE_PREFIX /home/ljy/Sustech_CS401_Final_Project/project_ws/src/wall_follow/turtlebot3_wall_follower)
+  set(turtlebot3_wall_follower_SOURCE_PREFIX /home/ljy/Sustech_CS401_Final_Project/project_ws/src/turtlebot3_wall_follower)
   set(turtlebot3_wall_follower_DEVEL_PREFIX /home/ljy/Sustech_CS401_Final_Project/project_ws/devel)
   set(turtlebot3_wall_follower_INSTALL_PREFIX "")
   set(turtlebot3_wall_follower_PREFIX ${turtlebot3_wall_follower_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/include " STREQUA
         message(FATAL_ERROR "Project 'turtlebot3_wall_follower' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'turtlebot3_wall_follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ljy/Sustech_CS401_Final_Project/project_ws/src/wall_follow/turtlebot3_wall_follower/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'turtlebot3_wall_follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ljy/Sustech_CS401_Final_Project/project_ws/src/turtlebot3_wall_follower/${idir}'.  ${_report}")
     endif()
     _list_append_unique(turtlebot3_wall_follower_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ljy/Sustech_CS401_Final_Project/project_ws/devel/lib;/home/ljy/pokemon_ws/devel/lib;/home/ljy/turtlebot3_ws/devel/lib;/home/ljy/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ljy/Sustech_CS401_Final_Project/project_ws/devel/lib;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/lib;/home/ljy/pokemon_ws/devel/lib;/home/ljy/turtlebot3_ws/devel/lib;/home/ljy/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

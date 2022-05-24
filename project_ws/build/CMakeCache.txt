@@ -403,6 +403,9 @@ class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/noetic/share/cv_bridge/cmake
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
 
@@ -476,6 +479,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
+
 //The directory containing a CMake configuration file for laser_filters.
 laser_filters_DIR:PATH=/opt/ros/noetic/share/laser_filters/cmake
 
@@ -511,6 +517,12 @@ nodelet_DIR:PATH=/opt/ros/noetic/share/nodelet/cmake
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
+
+//Value Computed by CMake
+pokemon_catching_BINARY_DIR:STATIC=/home/ljy/Sustech_CS401_Final_Project/project_ws/build/pokemon_catching
+
+//Value Computed by CMake
+pokemon_catching_SOURCE_DIR:STATIC=/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching
 
 //Value Computed by CMake
 pokemon_exploration_BINARY_DIR:STATIC=/home/ljy/Sustech_CS401_Final_Project/project_ws/build/pokemon_exploration
@@ -582,10 +594,10 @@ tf2_ros_DIR:PATH=/opt/ros/noetic/share/tf2_ros/cmake
 tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
 
 //Value Computed by CMake
-turtlebot3_wall_follower_BINARY_DIR:STATIC=/home/ljy/Sustech_CS401_Final_Project/project_ws/build/wall_follow/turtlebot3_wall_follower
+turtlebot3_wall_follower_BINARY_DIR:STATIC=/home/ljy/Sustech_CS401_Final_Project/project_ws/build/turtlebot3_wall_follower
 
 //Value Computed by CMake
-turtlebot3_wall_follower_SOURCE_DIR:STATIC=/home/ljy/Sustech_CS401_Final_Project/project_ws/src/wall_follow/turtlebot3_wall_follower
+turtlebot3_wall_follower_SOURCE_DIR:STATIC=/home/ljy/Sustech_CS401_Final_Project/project_ws/src/turtlebot3_wall_follower
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/noetic/share/urdf/cmake

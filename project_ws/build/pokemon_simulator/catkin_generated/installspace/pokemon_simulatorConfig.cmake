@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ljy/Sustech_CS401_Final_Project/project_ws/install/lib;/home/ljy/pokemon_ws/devel/lib;/home/ljy/turtlebot3_ws/devel/lib;/home/ljy/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ljy/Sustech_CS401_Final_Project/project_ws/install/lib;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/lib;/home/ljy/pokemon_ws/devel/lib;/home/ljy/turtlebot3_ws/devel/lib;/home/ljy/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

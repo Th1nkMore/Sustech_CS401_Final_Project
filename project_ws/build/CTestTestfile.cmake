@@ -6,6 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("pokemon_simulator")
-subdirs("pokemon_exploration")
-subdirs("wall_follow/turtlebot3_wall_follower")
+subdirs("pokemon_catching")
+subdirs("turtlebot3_wall_follower")
 subdirs("mycar_description")
