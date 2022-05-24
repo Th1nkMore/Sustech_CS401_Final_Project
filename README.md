@@ -12,7 +12,7 @@
 2. Auto identification (detect and grab naughty pokemon in a maze)
 3. (bonus) Multiple robots
 
-### Standard 
+### Judging Standard 
 
 #### General:
 
@@ -37,7 +37,11 @@
 
 OpenCV Contours: https://docs.opencv.org/4.5.5/d3/d05/tutorial_py_table_of_contents_contours.html
 
-Wall follower algorithm and pid control: https://github.com/juandpenan/turtlebot3_wall_follower
+Wall follower algorithm and PID control: https://github.com/juandpenan/turtlebot3_wall_follower
+
+OpenCV tutorial for saving Images:
+
+http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_gui/py_image_display/py_image_display.html
 
 
 

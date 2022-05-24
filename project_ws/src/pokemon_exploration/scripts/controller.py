@@ -13,7 +13,7 @@ class Burger:
     def __init__(self):
         full_param_name = rospy.search_param('autostart')
         self.auto_start= rospy.get_param(full_param_name)              
-        self.crash_distance = 0.3
+        self.crash_distance = 0.35
         self.queue_size=10
         self.middle_distance = 0
         self.front_distance = 0

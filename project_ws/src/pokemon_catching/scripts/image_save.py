@@ -1,40 +1,24 @@
 #! /usr/bin/python
-# Copyright (c) 2015, Rethink Robotics, Inc.
-
-# Using this CvBridge Tutorial for converting
-# ROS images to OpenCV2 images
-# http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython
-
-# Using this OpenCV2 tutorial for saving Images:
-# http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_gui/py_image_display/py_image_display.html
-
-# rospy for the subscriber
 import rospy
-# ROS Image message
 from sensor_msgs.msg import Image
-# ROS Image message -> OpenCV2 image converter
 from cv_bridge import CvBridge, CvBridgeError
-# OpenCV2 for saving an image
 import cv2
+import time
 
-# Instantiate CvBridge
 bridge = CvBridge()
-frequency = True
 
 def image_callback(msg):
     print("Received an image!")
-    if frequency:
-        frequency = not frequency
-        try:
-            # Convert your ROS Image message to OpenCV2
-            cv2_img = bridge.imgmsg_to_cv2(msg, "bgr8")
-        except CvBridgeError as e:
-            print(e)
-        else:
-            # Save your OpenCV2 image as a jpeg 
-            cv2.imwrite('/home/ljy/pokemon_ws/src/pokemon_catching/pokemon_photo/my_image.jpeg', cv2_img)
+
+
+    try:
+        cv2_img = bridge.imgmsg_to_cv2(msg, "bgr8")
+    except CvBridgeError as e:
+        print(e)
     else:
-        frequency = not frequency
+        dir = '/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/my_image.png'
+        cv2.imwrite(dir, cv2_img)
+        time.sleep(5)
         print("Take a break")
     
 
