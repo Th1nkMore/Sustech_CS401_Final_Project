@@ -1,2 +1,2 @@
-mycar_description:pokemon_catching:pokemon_simulator:turtlebot3_wall_follower
+mycar_description:pokemon_catching:pokemon_exploration:pokemon_simulator
 -DCATKIN_DEVEL_PREFIX=/home/ljy/Sustech_CS401_Final_Project/project_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ljy/Sustech_CS401_Final_Project/project_ws/install -G Unix Makefiles

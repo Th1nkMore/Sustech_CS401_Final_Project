@@ -7,5 +7,5 @@
 subdirs("gtest")
 subdirs("pokemon_simulator")
 subdirs("pokemon_catching")
-subdirs("turtlebot3_wall_follower")
+subdirs("pokemon_exploration")
 subdirs("mycar_description")

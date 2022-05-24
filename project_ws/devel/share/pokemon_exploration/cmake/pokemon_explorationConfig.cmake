@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(pokemon_exploration_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/include " STREQUAL " ")
   set(pokemon_exploration_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ljy/Sustech_CS401_Final_Project/project_ws/devel/lib;/home/ljy/pokemon_ws/devel/lib;/home/ljy/turtlebot3_ws/devel/lib;/home/ljy/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ljy/Sustech_CS401_Final_Project/project_ws/devel/lib;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/lib;/home/ljy/pokemon_ws/devel/lib;/home/ljy/turtlebot3_ws/devel/lib;/home/ljy/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(pokemon_exploration_EXPORTED_TARGETS "")
+set(pokemon_exploration_EXPORTED_TARGETS "pokemon_exploration_generate_messages_cpp;pokemon_exploration_generate_messages_eus;pokemon_exploration_generate_messages_lisp;pokemon_exploration_generate_messages_nodejs;pokemon_exploration_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${pokemon_exploration_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${pokemon_exploration_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "actionlib;actionlib_msgs;geometry_msgs;laser_filters;nav_msgs;rospy;sensor_msgs;std_msgs;tf")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(pokemon_exploration_EXPORTED_TARGETS ${${pokemon_exploration_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "pokemon_exploration-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${pokemon_exploration_DIR}/${extra})

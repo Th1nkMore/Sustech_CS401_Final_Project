@@ -133,7 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ljy/Sustech_CS401_Final_Project/project_ws/build/gtest/cmake_install.cmake")
   include("/home/ljy/Sustech_CS401_Final_Project/project_ws/build/pokemon_simulator/cmake_install.cmake")
   include("/home/ljy/Sustech_CS401_Final_Project/project_ws/build/pokemon_catching/cmake_install.cmake")
-  include("/home/ljy/Sustech_CS401_Final_Project/project_ws/build/turtlebot3_wall_follower/cmake_install.cmake")
+  include("/home/ljy/Sustech_CS401_Final_Project/project_ws/build/pokemon_exploration/cmake_install.cmake")
   include("/home/ljy/Sustech_CS401_Final_Project/project_ws/build/mycar_description/cmake_install.cmake")
 
 endif()

@@ -1,0 +1,19 @@
+(cl:defpackage pokemon_exploration-msg
+  (:use )
+  (:export
+   "<STARTACTION>"
+   "STARTACTION"
+   "<STARTACTIONFEEDBACK>"
+   "STARTACTIONFEEDBACK"
+   "<STARTACTIONGOAL>"
+   "STARTACTIONGOAL"
+   "<STARTACTIONRESULT>"
+   "STARTACTIONRESULT"
+   "<STARTFEEDBACK>"
+   "STARTFEEDBACK"
+   "<STARTGOAL>"
+   "STARTGOAL"
+   "<STARTRESULT>"
+   "STARTRESULT"
+  ))
+
