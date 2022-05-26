@@ -30,10 +30,10 @@ def getContours(img):
             return x,y,w,h
   
 #convert to black and white
-imgOrigin = cv2.imread('/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/my_image.png')
+imgOrigin = cv2.imread('/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/image2.png')
 imgGray = cv2.cvtColor(imgOrigin, cv2.COLOR_BGR2GRAY)
   
-(thresh, imageBlackWhite) = cv2.threshold(imgGray, 90, 255, cv2.THRESH_BINARY)
+(thresh, imageBlackWhite) = cv2.threshold(imgGray, 108, 255, cv2.THRESH_BINARY)
 cv2.imwrite('/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/BW.png',imageBlackWhite)
 imageBlackWhite = cv2.imread('/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/BW.png')
 imgGray = cv2.cvtColor(imageBlackWhite, cv2.COLOR_BGR2GRAY)
@@ -47,16 +47,20 @@ cv2.rectangle(imgOrigin, (x,y), (x+w,y+h), (0,0,255), 2)
 cropped_image = imageBlackWhite[y:y+h, x:x+w]
 cv2.imwrite("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_caught/BW_cropped.png",cropped_image)
 cropped_image = cv2.imread("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_caught/BW_cropped.png")
-os.remove("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_caught/BW_cropped.png")     
+# os.remove("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_caught/BW_cropped.png")     
 gray = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2GRAY)                  
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 value, threshold = cv2.threshold(blurred,60,255,cv2.THRESH_BINARY_INV)
 cnts, hierarchy = cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-cnt = cnts[0]
-x_,y_,w_,h_ = cv2.boundingRect(cnt)
+for i in range(len(cnts)):
+    cnt = cnts[i]
+    x_,y_,w_,h_ = cv2.boundingRect(cnt)
+    if w_/h_<=2:
+        break
+
 cv2.rectangle(imgOrigin,(x+x_,y+y_),(x+x_+w_,y+y_+h_),(0,255,0),2)
-print(x,y,h,w)
-print(x_,y_,h_,w_)
+# print(x,y,h,w)
+# print(x_,y_,h_,w_)
 cv2.imwrite("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_caught/pokemon_caught.png", imgOrigin)
 
 cv2.waitKey(0)

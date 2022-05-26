@@ -31,7 +31,7 @@ def getContours(img, imgContour):
 
 def pokemon_detect():
     # imgOrigin = cv2.imread("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/my_image.png") 
-    imgOrigin = cv2.imread("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/image1.png")  
+    imgOrigin = cv2.imread("/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/image3.png")  
     imgGray = cv2.cvtColor(imgOrigin, cv2.COLOR_BGR2GRAY)
     (thresh, imageBlackWhite) = cv2.threshold(imgGray, 108, 255, cv2.THRESH_BINARY)
     cv2.imwrite('/home/ljy/Sustech_CS401_Final_Project/project_ws/src/pokemon_catching/pokemon_photo/BW.png',imageBlackWhite)
