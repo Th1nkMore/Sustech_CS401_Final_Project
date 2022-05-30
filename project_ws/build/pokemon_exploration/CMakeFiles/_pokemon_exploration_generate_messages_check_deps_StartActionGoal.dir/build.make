@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ljy/Sustech_CS401_Final_Project/project_ws/build
 include pokemon_exploration/CMakeFiles/_pokemon_exploration_generate_messages_check_deps_StartActionGoal.dir/progress.make
 
 pokemon_exploration/CMakeFiles/_pokemon_exploration_generate_messages_check_deps_StartActionGoal:
-	cd /home/ljy/Sustech_CS401_Final_Project/project_ws/build/pokemon_exploration && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pokemon_exploration /home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg actionlib_msgs/GoalID:std_msgs/Header:pokemon_exploration/StartGoal
+	cd /home/ljy/Sustech_CS401_Final_Project/project_ws/build/pokemon_exploration && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py pokemon_exploration /home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg pokemon_exploration/StartGoal:std_msgs/Header:actionlib_msgs/GoalID
 
 _pokemon_exploration_generate_messages_check_deps_StartActionGoal: pokemon_exploration/CMakeFiles/_pokemon_exploration_generate_messages_check_deps_StartActionGoal
 _pokemon_exploration_generate_messages_check_deps_StartActionGoal: pokemon_exploration/CMakeFiles/_pokemon_exploration_generate_messages_check_deps_StartActionGoal.dir/build.make

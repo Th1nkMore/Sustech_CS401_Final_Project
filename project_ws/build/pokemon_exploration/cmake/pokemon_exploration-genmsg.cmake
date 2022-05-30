@@ -19,22 +19,22 @@ add_custom_target(pokemon_exploration_generate_messages ALL)
 
 get_filename_component(_filename "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg" NAME_WE)
 add_custom_target(_pokemon_exploration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg" "pokemon_exploration/StartActionGoal:actionlib_msgs/GoalID:pokemon_exploration/StartGoal:std_msgs/Header:pokemon_exploration/StartResult:pokemon_exploration/StartFeedback:actionlib_msgs/GoalStatus:pokemon_exploration/StartActionResult:pokemon_exploration/StartActionFeedback"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg" "pokemon_exploration/StartGoal:std_msgs/Header:pokemon_exploration/StartActionFeedback:pokemon_exploration/StartActionResult:actionlib_msgs/GoalStatus:pokemon_exploration/StartActionGoal:pokemon_exploration/StartResult:pokemon_exploration/StartFeedback:actionlib_msgs/GoalID"
 )
 
 get_filename_component(_filename "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg" NAME_WE)
 add_custom_target(_pokemon_exploration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg" "actionlib_msgs/GoalID:std_msgs/Header:pokemon_exploration/StartGoal"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg" "pokemon_exploration/StartGoal:std_msgs/Header:actionlib_msgs/GoalID"
 )
 
 get_filename_component(_filename "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg" NAME_WE)
 add_custom_target(_pokemon_exploration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg" "actionlib_msgs/GoalStatus:pokemon_exploration/StartResult:actionlib_msgs/GoalID:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg" "pokemon_exploration/StartResult:actionlib_msgs/GoalStatus:std_msgs/Header:actionlib_msgs/GoalID"
 )
 
 get_filename_component(_filename "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg" NAME_WE)
 add_custom_target(_pokemon_exploration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg" "actionlib_msgs/GoalStatus:pokemon_exploration/StartFeedback:actionlib_msgs/GoalID:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pokemon_exploration" "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg" "pokemon_exploration/StartFeedback:actionlib_msgs/GoalStatus:std_msgs/Header:actionlib_msgs/GoalID"
 )
 
 get_filename_component(_filename "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg" NAME_WE)
@@ -61,25 +61,25 @@ add_custom_target(_pokemon_exploration_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_cpp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_cpp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_cpp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_cpp(pokemon_exploration
@@ -142,25 +142,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pokemon_exploration_generate_messag
 _generate_msg_eus(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_eus(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_eus(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_eus(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_eus(pokemon_exploration
@@ -223,25 +223,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pokemon_exploration_generate_messag
 _generate_msg_lisp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_lisp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_lisp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_lisp(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_lisp(pokemon_exploration
@@ -304,25 +304,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pokemon_exploration_generate_messag
 _generate_msg_nodejs(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_nodejs(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_nodejs(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_nodejs(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_nodejs(pokemon_exploration
@@ -385,25 +385,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pokemon_exploration_generate_messag
 _generate_msg_py(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_py(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_py(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_py(pokemon_exploration
   "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/ljy/Sustech_CS401_Final_Project/project_ws/devel/share/pokemon_exploration/msg/StartFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pokemon_exploration
 )
 _generate_msg_py(pokemon_exploration

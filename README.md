@@ -123,17 +123,19 @@ More testing examples:
 
 ![image-20220526180803473](image/image-20220526180803473.png)
 
+### Multi-robots 
 
+`namespace` `tf-prefixes`
 
 ## reference list
 
 OpenCV Contours: https://docs.opencv.org/4.5.5/d3/d05/tutorial_py_table_of_contents_contours.html
 
-Wall follower algorithm and PID control: https://github.com/juandpenan/turtlebot3_wall_follower
+Wall follow algorithm with PID control: https://github.com/juandpenan/turtlebot3_wall_follower
 
-OpenCV tutorial for saving Images:
+OpenCV tutorial for saving Images:http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_gui/py_image_display/py_image_display.html
 
-http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_gui/py_image_display/py_image_display.html
+Multi-robots:https://answers.ros.org/question/41433/multiple-robots-simulation-and-navigation/
 
 
 

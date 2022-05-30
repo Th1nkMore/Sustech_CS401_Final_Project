@@ -7,5 +7,6 @@
 subdirs("gtest")
 subdirs("pokemon_simulator")
 subdirs("pokemon_catching")
+subdirs("pokemon_maze_plugin")
 subdirs("pokemon_exploration")
 subdirs("mycar_description")

@@ -49,7 +49,7 @@
     <arg name="z_pos" default="0"/>  
     <arg name="yaw"   default=" 1.557316"/>
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find pokemon_simulator)/worlds/pokemon_maze_cs405.world"/>
+        <arg name="world_name" value="$(find pokemon_maze_plugin)/worlds/pokemon_maze_cs405_animate.world"/>
     </include>
       <param name="robot_description" command="$(find xacro)/xacro $(find mycar_description)/urdf/turtlebot3.kinect.xacro" />
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
@@ -64,12 +64,12 @@
         <param name="tf_prefix" value="$(arg multi_robot_name)"/>
     </node>
     <!-- UNUSED NOW-->>
-    <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" output="screen">
+    <!-- <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" output="screen">
       <remap from="image" to="/kinect/depth/image_raw" />
       <remap from="camera_info" to="/kinect/depth/camera_info" />
       <remap from="scan" to="/kinect/scan" />
       <param name="output_frame_id" value="/kinect_link" />
-    </node>
+    </node> -->
 
     <!-- FILTERING NODES -->   
     <node pkg="laser_filters" type="scan_to_scan_filter_chain" output="screen" name="laser_filter">
