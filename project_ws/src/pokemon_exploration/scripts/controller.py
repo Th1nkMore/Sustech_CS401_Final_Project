@@ -13,7 +13,7 @@ class Burger:
     def __init__(self):
         full_param_name = rospy.search_param('autostart')
         self.auto_start= rospy.get_param(full_param_name)              
-        self.crash_distance = 0.2
+        self.crash_distance = 0.3
         self.queue_size=10
         self.middle_distance = 0
         self.front_distance = 0
@@ -85,8 +85,8 @@ class Burger:
     def follow_wall(self):
         
         while not self.is_on_signal_value and not self.auto_start :
-            rospy.logwarn("waiting for a goal")
-            rospy.sleep(4.)
+            rospy.logwarn("taking photos")
+            rospy.sleep(1.)
 
         if self.is_on_signal_value or self.auto_start:            
             self.find_a_wall()
